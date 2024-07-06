@@ -2,6 +2,7 @@ node_modules
 dist
 .wrangler
 .dev.vars
+.env*
 
 # Change them to your taste:
 wrangler.toml
@@ -18,4 +19,4 @@ bun.lockb
 .tmp/
 .vite/
 
-src/routeTree.gen.ts
+app/routeTree.gen.ts

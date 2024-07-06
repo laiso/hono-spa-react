@@ -6,7 +6,7 @@ export const Route = createLazyFileRoute("/about")({
 
 function About() {
   return (
-    <div className="bg-gray-800 text-white py-4">
+    <div className="py-4">
       <p>
         The purpose of this site is to serve as a repository for my research.
         Please refer to the following GitHub repository for more details.

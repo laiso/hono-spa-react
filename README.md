@@ -15,12 +15,12 @@ This template provides a minimal setup to get you started with:
 
 The project structure is organized as follows:
 
-- **`src/`**: Contains the source code for both the client and the API.
-  - **`api/`**: Hono API code (`src/api/index.tsx`)
-  - **`main.tsx`**: Entry point for the React application (`src/main.tsx`)
-  - **`routes/`**: React Router routes (e.g., `src/routes/__root.tsx`, `src/routes/about.lazy.tsx`, `src/routes/index.lazy.tsx`)
-  - **`style.css`**: Tailwind CSS stylesheet (`src/style.css`)
-  - **`components/`**: React components (e.g., `src/components/notion-like-editor.tsx`)
+- **`app/`**: Contains the source code for both the client and the API.
+  - **`api/`**: Hono API code (`app/api/index.tsx`)
+  - **`main.tsx`**: Entry point for the React application (`app/main.tsx`)
+  - **`routes/`**: React Router routes (e.g., `app/routes/__root.tsx`, `app/routes/about.lazy.tsx`, `app/routes/index.lazy.tsx`)
+  - **`style.css`**: Tailwind CSS stylesheet (`app/style.css`)
+  - **`components/`**: React components (e.g., `app/components/notion-like-editor.tsx`)
 - **`vite.config.ts`**: Vite configuration file (`vite.config.ts`)
 - **`tailwind.config.js`**: Tailwind CSS configuration file (`tailwind.config.js`)
 - **`tsconfig.app.json`**: TypeScript configuration file for the application (`tsconfig.app.json`)
