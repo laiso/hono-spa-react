@@ -26,8 +26,8 @@ const Header = ({ logo }: HeaderProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/">
-              <span className="font-bold text-xl">{logo}</span>
+            <Link to="/" className="font-bold text-xl">
+              {logo}
             </Link>
           </div>
 
@@ -36,19 +36,22 @@ const Header = ({ logo }: HeaderProps) => {
             <NavigationMenu>
               <NavigationMenuList className="flex space-x-4">
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="text-sm">
+                  <NavigationMenuLink className="text-sm" asChild>
+                    <Link to="/payment">Payment</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink className="text-sm" asChild>
                     <Link to="/editor">Editor</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="text-sm">
-                  <Link to="/about">About</Link>
+                  <NavigationMenuLink className="text-sm" asChild>
+                    <Link to="/about">About</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="text-sm text-gray-400">
-                    Help
-                  </NavigationMenuLink>
+                  <NavigationMenuLink active={false}>Help</NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -67,12 +70,12 @@ const Header = ({ logo }: HeaderProps) => {
                 size={16}
               />
             </div>
-            <a href="https://github.com/laiso/hono-spa-react/issues">
+            <Link to="https://github.com/laiso/hono-spa-react/issues">
               <Button variant="ghost" size="sm" className="ml-2">
                 Feedback
                 <ExternalLink className="pl-1 text-gray-400" size={16} />
               </Button>
-            </a>
+            </Link>
             <SignedOut>
               <SignInButton>
                 <Button variant="outline" size="sm" className="ml-2">
