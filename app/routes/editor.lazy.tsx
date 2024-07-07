@@ -1,8 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import "../style.css";
-import NotionLikeEditor from "../components/notion-like-editor";
+import NotionLikeEditor from "@/components/ui/notion-like-editor";
 
-export const Route = createLazyFileRoute("/")({
+export const Route = createLazyFileRoute("/editor")({
   component: Index,
 });
 
@@ -11,3 +10,4 @@ function Index() {
     <NotionLikeEditor />
   );
 }
+
