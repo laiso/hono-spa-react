@@ -70,6 +70,19 @@ The project structure is organized as follows:
 
    This will deploy the built application to your Cloudflare Pages account.
 
+## Authentication
+
+This template uses [Clerk](https://clerk.com) for authentication. To get started, sign up for a free account and create a new project. Then, update the following environment variables in the `.env` file:
+
+```
+export CLERK_PUBLISHABLE_KEY=pk_test_XXX
+export CLERK_SECRET_KEY=sk_test_XXX
+```
+
+Clerk documentation is available at:
+
+https://clerk.com/docs
+
 ## Expanding the ESLint Configuration
 
 For production applications, consider updating the ESLint configuration to enable type-aware lint rules:
