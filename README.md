@@ -75,8 +75,13 @@ The project structure is organized as follows:
 This template uses [Clerk](https://clerk.com) for authentication. To get started, sign up for a free account and create a new project. Then, update the following environment variables in the `.env` file:
 
 ```
+# development
 export CLERK_PUBLISHABLE_KEY=pk_test_XXX
 export CLERK_SECRET_KEY=sk_test_XXX
+
+# production
+npx wrangler secret put CLERK_PUBLISHABLE_KEY
+npx wrangler secret put CLERK_SECRET_KEY
 ```
 
 Clerk documentation is available at:
