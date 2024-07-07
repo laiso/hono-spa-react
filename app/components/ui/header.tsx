@@ -13,6 +13,7 @@ import {
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
+import { Link } from "@tanstack/react-router";
 
 type HeaderProps = {
   logo: string;
@@ -25,7 +26,9 @@ const Header = ({ logo }: HeaderProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="font-bold text-xl">{logo}</span>
+            <Link to="/">
+              <span className="font-bold text-xl">{logo}</span>
+            </Link>
           </div>
 
           {/* Navigation */}
@@ -34,16 +37,16 @@ const Header = ({ logo }: HeaderProps) => {
               <NavigationMenuList className="flex space-x-4">
                 <NavigationMenuItem>
                   <NavigationMenuLink className="text-sm">
-                    Documentation
+                    <Link to="/editor">Editor</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink className="text-sm">
-                    Guides
+                  <Link to="/about">About</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="text-sm">
+                  <NavigationMenuLink className="text-sm text-gray-400">
                     Help
                   </NavigationMenuLink>
                 </NavigationMenuItem>
